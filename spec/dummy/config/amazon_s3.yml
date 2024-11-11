@@ -6,7 +6,7 @@ defaults: &defaults
 
 development:
   <<: *defaults
-  bucket: your_development_bucket_name
+  bucket: previewfirst-dev
     
 test:
   <<: *defaults

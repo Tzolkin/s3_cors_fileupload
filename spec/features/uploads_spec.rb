@@ -1,10 +1,15 @@
 require 'spec_helper'
 
 feature 'Uploads' do
-  background { visit source_files_path }
+  # background { visit source_files_path }
 
   describe 'GET #index' do
-    scenario { page.should have_selector('h2', text: 'Upload file(s)') }
+    before { visit source_files_path }
+
+    scenario do 
+      # expect(page).to have_selector('h2', text: 'Upload file(s)') 
+      page.should have_selector('h2', text: 'Upload file(s)') 
+    end
 
     scenario :s3_cors_fileupload_form_tag do
       within('form#fileupload') do

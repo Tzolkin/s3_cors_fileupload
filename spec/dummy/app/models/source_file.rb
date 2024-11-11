@@ -1,4 +1,4 @@
-require 'aws-sdk'
+require 'aws-sdk-s3'
 
 class SourceFile < ActiveRecord::Base
   # This line can be removed for Rails 4 apps that are using Strong Parameters
