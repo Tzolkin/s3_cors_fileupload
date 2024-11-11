@@ -63,8 +63,8 @@ describe S3CorsFileupload::PolicyHelper do
     end
   end
 
-  describe "Instance Methods" do
-    describe :policy_document do
+  describe 'Instance Methods' do
+    describe 'policy_document' do
       it { should respond_to(:policy_document) }
 
       it "should generate a policy document for AWS S3 and use `Base64` to encode it" do
@@ -94,7 +94,7 @@ describe S3CorsFileupload::PolicyHelper do
       end
     end
 
-    describe :upload_signature do
+    describe 'upload_signature' do
       it { should respond_to(:upload_signature) }
 
       it "should create an upload signature based off our secret_access_key, and convert it to a string" do

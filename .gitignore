@@ -20,6 +20,10 @@ doc
 # jeweler generated
 pkg
 
+.tool-versions
+.byebug_history
+s3_cors_fileupload-*.gem
+
 # Have editor/IDE/OS specific files you need to ignore? Consider using a global gitignore: 
 #
 # * Create a file at ~/.gitignore

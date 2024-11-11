@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.2'
-gem 'mime-types', '< 3.0' # Ruby2+ required for mime-types 3.x
+gem 'rails', '5.0'
+gem 'mime-types', '~> 3.5.2' # Ruby2+ required for mime-types 3.x
 
 group :test do
-  gem 'sqlite3' # the database driver for rails
+  gem 'bigdecimal', '1.4.4'
+  gem 'sqlite3', '1.3.13'# the database driver for rails
   gem 'jquery-rails' # for including jQuery into the dummy app
 
   gem 'rspec-rails', '~> 2.14'
