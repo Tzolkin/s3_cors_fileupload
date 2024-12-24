@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '6.0'
+gem 'rails', '6.1'
 gem 'mime-types', '~> 3.5.2' # Ruby2+ required for mime-types 3.x
 
 group :test do
@@ -8,7 +8,7 @@ group :test do
   gem 'sqlite3', '1.5.0'# the database driver for rails
   gem 'jquery-rails' # for including jQuery into the dummy app
 
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '~> 4.1.0'
   gem 'shoulda-matchers', '~> 2.4'
   gem 'generator_spec'
   gem 'ffaker'

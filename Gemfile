@@ -18,7 +18,7 @@ group :test do
   gem 'poltergeist' # to use as JS driver for Capybara
   gem 'phantomjs', '2.1.1', :require => 'phantomjs/poltergeist'
   gem 'rack', '2.2.9'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '~> 4.1.0'
   gem 'rspec-its'
   gem 'shoulda-matchers', '~> 2.4'
   gem 'byebug'

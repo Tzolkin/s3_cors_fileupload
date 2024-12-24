@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'aws-sdk-s3', '~> 1.152.3'
   s.add_dependency 'multi_json', '~> 1.0'
-  s.add_dependency 'rails', '6.0'
+  s.add_dependency 'rails', '6.1'
 
   s.add_development_dependency 'bundler', '2.1.4'
   s.add_development_dependency 'rake', '>= 0.8.7'
