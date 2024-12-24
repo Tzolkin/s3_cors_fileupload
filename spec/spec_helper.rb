@@ -11,7 +11,8 @@ Capybara.javascript_driver = :poltergeist
 Capybara.ignore_hidden_elements = false
 
 # Run any available migration in the dummy app
-ActiveRecord::Migrator.migrate("#{::Rails.root}/db/migrate")
+# ActiveRecord::Migrator.migrate("#{::Rails.root}/db/migrate")
+ActiveRecord::Migration.migrate("#{::Rails.root}/db/migrate")
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
