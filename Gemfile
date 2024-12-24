@@ -16,13 +16,10 @@ group :test do
   gem 'ffaker'
   gem 'generator_spec'
   gem 'poltergeist' # to use as JS driver for Capybara
-  gem 'phantomjs', '1.9.8', :require => 'phantomjs/poltergeist'
+  gem 'phantomjs', '2.1.1', :require => 'phantomjs/poltergeist'
   gem 'rack', '2.2.9'
-  gem 'rspec-rails', '~> 2.14'
+  gem 'rspec-rails', '~> 3.0'
   gem 'rspec-its'
   gem 'shoulda-matchers', '~> 2.4'
   gem 'byebug'
-
-  # sqlite3 dependencies
-
 end
