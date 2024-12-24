@@ -10,7 +10,7 @@ group :test do
   gem 'bigdecimal', '1.4.4'
   # dependencies for S3CorsFileUpload
   gem 'jquery-rails' # for including jQuery into the dummy app
-  gem 'sqlite3', '1.3.13' # the database driver for rails
+  gem 'sqlite3', '1.5.0' # the database driver for rails
 
   gem 'capybara', '2.18'
   gem 'ffaker'
