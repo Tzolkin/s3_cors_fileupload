@@ -10,10 +10,10 @@ module S3CorsFileupload
     def initialize(_options = {})
       # default max_file_size to 500 MB if nothing is received
       @options = {
-        :acl => Config.acl || 'public-read',
-        :max_file_size => Config.max_file_size || 524288000,
-        :bucket => Config.bucket
-      }.merge(_options).merge(:secret_access_key => Config.secret_access_key)
+        acl: Config.acl || 'public-read',
+        max_file_size: Config.max_file_size || 524_288_000,
+        bucket: Config.bucket
+      }.merge(_options).merge(secret_access_key: Config.secret_access_key)
 
       validate_presence_of_options(:bucket, :secret_access_key)
     end
@@ -29,10 +29,10 @@ module S3CorsFileupload
                 { bucket: options[:bucket] },
                 { acl: options[:acl] },
                 { success_action_status: '201' },
-                ["content-length-range", 0, options[:max_file_size]],
-                ["starts-with", "$utf8", ""],
-                ["starts-with", "$key", ""],
-                ["starts-with", "$Content-Type", ""]
+                ['content-length-range', 0, options[:max_file_size]],
+                # ["starts-with", "$utf8", ""],
+                ['starts-with', '$key', ''],
+                ['starts-with', '$Content-Type', '']
               ]
             }
           )
@@ -44,9 +44,9 @@ module S3CorsFileupload
       @upload_signature ||=
         Base64.encode64(
           OpenSSL::HMAC.digest(
-            OpenSSL::Digest::SHA1.new,
+            OpenSSL::Digest.new('SHA1'),
             options[:secret_access_key],
-            self.policy_document
+            policy_document
           )
         ).gsub(/\n/, '')
     end
@@ -56,10 +56,10 @@ module S3CorsFileupload
     def validate_presence_of_options(*options)
       options.each do |option|
         if @options[option].blank?
-          raise S3CorsFileupload::Config::MissingOptionError, "'#{option}' is a required option in #{S3CorsFileupload::Config.file_path}"
+          raise S3CorsFileupload::Config::MissingOptionError,
+                "'#{option}' is a required option in #{S3CorsFileupload::Config.file_path}"
         end
       end
     end
-
   end
 end
